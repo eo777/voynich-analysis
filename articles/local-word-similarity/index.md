@@ -25,26 +25,6 @@ The regular layout has a consistent left margin and spacing. Two additional sett
 
 Pagination is deliberately explicit: **48 source lines per synthetic page**, with a new page at each book boundary. This is a line-preserving control, not an exact reconstruction of historical pagination, indentation, stanza gaps, or handwriting. The underlying typesetting tool can accept those details when they are available.
 
-## Explore the three metrics
-
-**Identity** counts exact matches between normalized word spellings. **Exactly one edit** counts pairs at ordinary Levenshtein distance 1: one insertion, deletion, or substitution. It excludes identical words. The same ordinary edit rule is used across all six texts; Voynich is scored on its EVA transcription characters. This differs from the weighted manuscript-specific distance 1–2 used in the earlier Timm reconstruction.
-
-**JS similarity** compares within-word feature distributions. It is expressed as `100 × (1 − sqrt(JSD₂))`, so larger values mean greater similarity. The historical texts use adjacent letter pairs. Voynich uses adjacent Zattera component pairs, following the existing manuscript JS run. Exact spelling matches are included, and distinct spellings can also have identical feature distributions. This is a spelling-composition measure, not a semantic measure.
-
-::chart[similarity-explorer]
-
-The native chart above lets you select a text, metric, coordinate system, and poetry spacing setting. Its data are available as JSON, and the current view can be exported as SVG. The complete comparison sheets below place all six texts together.
-
-## Compare all six texts
-
-::gallery[comparison-sheets]
-
-The **third column** subtracts the shuffle mean from the observed value. Red indicates excess similarity and blue indicates a deficit under that particular null. Each text has its own color scale, stated beside the plots. The scales stay fixed across that text’s three spacing settings, but equal-looking colors in different rows need not represent equal numerical effects.
-
-Towneley Creation shows an above-target excess in the JS and identity maps when its source lines are preserved. The pattern remains visible across the three chosen spacing settings. The Aeneid’s JS excess is smaller. Voynich also shows an above-target band of excess, while the historical prose maps generally show less conspicuous above-line organization in these displays. The one-edit maps provide a separate view because exact repetitions do not contribute to that metric.
-
-These are descriptions of the displayed surfaces. They are not pixelwise significance claims, a familywise test of the maps, or evidence that poetry and Voynich share the same text-generation mechanism.
-
 ## From word boxes to a continuous map {#continuous-method}
 
 The illustration below starts from an actual manuscript image. The target is **qokeedy** on f75r. Its eligible partners are identified using this analysis’s preceding-line and earlier-word rules. The orange and purple outlines show the target and one selected source; switch the overlay to inspect either their **JS similarity** or their **positional weight**.
@@ -74,6 +54,26 @@ The composite sheets use **within-line, exact-character-length permutations**. E
 There are **999 draws** for Voynich and both poetry controls, and **199 draws** for each historical prose control. The poetry’s regular, mild, and more-dispersed layouts use identical permutations. For those independently typeset controls, replaying actual same-length shuffled inputs reproduced every box and line record.
 
 The poetry calculations also include a within-page, exact-length null. The sheets and interactive explorer here deliberately use the within-line null throughout. No new p-values are assigned to these maps.
+
+## Explore the three metrics
+
+**Identity** counts exact matches between normalized word spellings. **Exactly one edit** counts pairs at ordinary Levenshtein distance 1: one insertion, deletion, or substitution. It excludes identical words. The same ordinary edit rule is used across all six texts; Voynich is scored on its EVA transcription characters. This differs from the weighted manuscript-specific distance 1–2 used in the earlier Timm reconstruction.
+
+**JS similarity** compares within-word feature distributions. It is expressed as `100 × (1 − sqrt(JSD₂))`, so larger values mean greater similarity. The historical texts use adjacent letter pairs. Voynich uses adjacent Zattera component pairs, following the existing manuscript JS run. Exact spelling matches are included, and distinct spellings can also have identical feature distributions. This is a spelling-composition measure, not a semantic measure.
+
+::chart[similarity-explorer]
+
+The native chart above lets you select a text, metric, coordinate system, and poetry spacing setting. Its data are available as JSON, and the current view can be exported as SVG. The complete comparison sheets below place all six texts together.
+
+## Compare all six texts
+
+::gallery[comparison-sheets]
+
+The **third column** subtracts the shuffle mean from the observed value. Red indicates excess similarity and blue indicates a deficit under that particular null. Each text has its own color scale, stated beside the plots. The scales stay fixed across that text’s three spacing settings, but equal-looking colors in different rows need not represent equal numerical effects.
+
+Towneley Creation shows an above-target excess in the JS and identity maps when its source lines are preserved. The pattern remains visible across the three chosen spacing settings. The Aeneid’s JS excess is smaller. Voynich also shows an above-target band of excess, while the historical prose maps generally show less conspicuous above-line organization in these displays. The one-edit maps provide a separate view because exact repetitions do not contribute to that metric.
+
+These are descriptions of the displayed surfaces. They are not pixelwise significance claims, a familywise test of the maps, or evidence that poetry and Voynich share the same text-generation mechanism.
 
 ## What this comparison supports
 
