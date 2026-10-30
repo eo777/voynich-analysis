@@ -45,6 +45,18 @@ Towneley Creation shows an above-target excess in the JS and identity maps when 
 
 These are descriptions of the displayed surfaces. They are not pixelwise significance claims, a familywise test of the maps, or evidence that poetry and Voynich share the same text-generation mechanism.
 
+## From word boxes to a continuous map {#continuous-method}
+
+The illustration below starts from an actual manuscript image. The target is **qokeedy** on f75r. Its eligible partners are identified using this analysis’s preceding-line and earlier-word rules. The orange and purple outlines show the target and one selected source; switch the overlay to inspect either their **JS similarity** or their **positional weight**.
+
+::chart[continuous-method]
+
+The two quantities do different jobs. JS similarity describes how much the words’ component-pair distributions resemble one another. The positional kernel describes how strongly that pair contributes at each displacement. It averages a Gaussian over every source-point/target-point combination in the **full rectangles**, with each rectangle normalized to unit mass. Wider words therefore spread their contribution over more offsets instead of automatically receiving more total weight. The Gaussian bandwidths are fixed at 0.75 page-median word advances horizontally and 0.50 line pitches vertically.
+
+At each map location, we divide the sum of **weight × similarity** by the sum of weights. The illustration shows this calculation for one target; the published maps pool all eligible pairs across targets. The shuffled maps repeat the same calculation with geometry held fixed, and the difference panel subtracts the shuffle mean. Same-line pairs are calculated separately. A smooth kernel can extend beyond a box without admitting additional words into the eligible set.
+
+The photograph is registered to the recorded rectangles for display; that mapping does not change the geometry used in the analysis. The scan is from [Yale’s Beinecke MS 408 collection](https://collections.library.yale.edu/catalog/2002046). Word coordinates are from the Voynichese Project under the [Apache 2.0 license](https://www.apache.org/licenses/LICENSE-2.0). A [static illustration](images/continuous-method.png) and [SVG version](images/continuous-method.svg) are also available.
+
 ## What the coordinates mean
 
 The **ordinal** maps use positions in transcribed lines: how many lines above the target, and how many word positions to either side. For the controls, the upper window covers nine preceding lines and offsets −5 through +5, with five predecessor positions on the current line. Original word slots are retained, including one-character words that are not scored.

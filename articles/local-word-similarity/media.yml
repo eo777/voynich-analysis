@@ -115,6 +115,12 @@ figures:
     caption: Regular-spacing previews. The boxes are the scored geometry; the labels are illustrative
       typesetting, not scanned handwriting. Synthetic pagination uses 48 source lines per page.
 charts:
+  continuous-method:
+    title: How the continuous calculation uses word rectangles
+    type: continuous-method
+    data: data/continuous-method.json
+    fallback: images/continuous-method.png
+    caption: Actual f75r scan with registered boxes. Choose a source and compare candidate eligibility, word similarity, and positional weight. This is a worked illustration of one target, not a new statistical result.
   similarity-explorer:
     title: Explore local word similarity
     type: heatmap

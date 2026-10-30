@@ -6,5 +6,5 @@ export default {
   repository: 'https://github.com/eo777/voynich-analysis',
   language: 'en',
   // Registered chart implementations are shared by every article.
-  charts: { heatmap: 'theme/charts/heatmap.js' }
+  charts: { heatmap: 'theme/charts/heatmap.js', 'continuous-method': 'theme/charts/continuous-method.js' }
 };
