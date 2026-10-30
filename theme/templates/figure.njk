@@ -1,0 +1,4 @@
+<figure class="figure" id="{{ instance }}">
+  <a class="figure-open" href="{{ item.src }}" data-image-open data-title="{{ item.title }}"><img src="{{ item.src }}" alt="{{ item.alt }}" loading="lazy" decoding="async"></a>
+  <figcaption><strong>{{ item.title }}</strong>{% if item.caption %}<p>{{ item.caption }}</p>{% endif %}<p class="figure-links"><a href="#{{ instance }}" data-copy-link aria-label="Copy link to {{ item.title }}">Copy link</a> · <a href="{{ item.src }}">Full-size image</a>{% if item.download %} · <a href="{{ item.download }}">Vector SVG</a>{% endif %}</p></figcaption>
+</figure>

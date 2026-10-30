@@ -1,0 +1,15 @@
+{% extends "base.njk" %}
+{% block main %}
+<div class="page-intro"><p class="eyebrow">Research notebook</p><h1>{{ title }}</h1><p class="lede">{{ intro }}</p></div>
+<div class="article-list">
+{% for article in articles %}
+<article class="article-card">
+  <p class="eyebrow"><time datetime="{{ article.date }}">{{ article.date }}</time>{% if article.status %} · {{ article.status }}{% endif %}</p>
+  <h2><a href="{{ url(article.path) }}">{{ article.title }}</a></h2>
+  <p>{{ article.summary }}</p>
+  <ul class="tags" aria-label="Topics">{% for tag in article.tags %}<li>{{ tag }}</li>{% endfor %}</ul>
+  <a href="{{ url(article.path) }}">Read the analysis <span aria-hidden="true">→</span></a>
+</article>
+{% else %}<p>No published articles yet.</p>{% endfor %}
+</div>
+{% endblock %}

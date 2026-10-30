@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="{{ site.language }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}{% if title != site.title %} · {{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ url(pagePath) }}">
+  <link rel="stylesheet" href="{{ asset('theme/assets/site.css') }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ url('feed.xml') }}">
+  <script type="module" src="{{ asset('theme/assets/site.js') }}"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="site-name" href="{{ url('') }}">{{ site.title }}</a>
+    <nav aria-label="Main navigation"><a href="{{ url('articles/') }}">Articles</a><a href="{{ site.repository }}">Source</a></nav>
+  </header>
+  <main id="main">{% block main %}{% endblock %}</main>
+  <footer class="site-footer"><p>{{ site.description }}</p><a href="{{ url('feed.xml') }}">RSS feed</a></footer>
+  <dialog class="image-viewer" aria-labelledby="viewer-title">
+    <div class="viewer-bar"><h2 id="viewer-title">Figure</h2><button type="button" data-viewer-size aria-pressed="false">Actual size</button><button type="button" data-viewer-close>Close</button></div>
+    <div class="viewer-image"><img alt=""></div>
+  </dialog>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<section class="figure-gallery" id="{{ instance }}" aria-label="{{ title }}" data-gallery>
+  <header class="gallery-header"><h3>{{ title }} <a class="permalink" href="#{{ instance }}" data-copy-link aria-label="Copy link to {{ title }}">Link</a></h3><p data-gallery-count aria-live="polite">1 / {{ items | length }}</p></header>
+  <div class="gallery-choices" role="tablist" aria-label="Choose a figure">
+  {% for item in items %}<button type="button" class="gallery-choice" id="{{ instance }}-tab-{{ loop.index0 }}" role="tab" aria-selected="{{ 'true' if loop.first else 'false' }}" aria-controls="{{ instance }}-panel-{{ loop.index0 }}" tabindex="{{ '0' if loop.first else '-1' }}">{% if item.thumbnail %}<img src="{{ item.thumbnail }}" alt="" loading="lazy">{% endif %}<span>{{ item.title }}</span></button>{% endfor %}
+  </div>
+  {% for item in items %}<div class="gallery-panel" id="{{ instance }}-panel-{{ loop.index0 }}" role="tabpanel" aria-labelledby="{{ instance }}-tab-{{ loop.index0 }}" tabindex="0" {% if not loop.first %}hidden{% endif %}>{{ item.html | safe }}</div>{% endfor %}
+</section>

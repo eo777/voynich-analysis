@@ -1,0 +1,166 @@
+{
+  "scope": "Current descriptive word-similarity maps only; no withdrawn Markov or retired transplant figures.",
+  "export_date": "2026-10-30",
+  "source_results_sha256": {
+    "js-aggregate-heatmaps.json": "05a497ee3fbcd22dfaa6fe76f2f3ecfd4867583e2fddfcde6bd8d52475e8cfba",
+    "js-voynich-ordinal-heatmaps.json": "a426511b1f1b40dae22f89cf1b31b0f37c1440fde795d2867482c1f53543c7d0",
+    "voynich-pair-metric-heatmaps.json": "210d6140ceedd70d4a090e44c711da5b1ee815e08751bfce29c169d7210b7df6",
+    "poetry-independent-towneley_creation-results.json": "7369a17397991212ede5fa93c2e063c21a5ac9f06e89c0f541e8cf3ca0f978ce",
+    "poetry-independent-aeneid-results.json": "cdc026092e7bbd78879dd57d4a26f7afa20a3fd008b00e60e8417cb012058600",
+    "historical-map-la_rhazes_almansor.json": "b70b78bbceae15c63a6ac3c8583b6b7dd9c86a795f708b075bbf02e03bf06d12",
+    "historical-map-la_galen_simplicium.json": "59cae805e24d6e4b5f5960163310227fc19f6422b756162f0949df7a966dd61f",
+    "historical-map-de_gart_augsburg1487.json": "6450c640af97fa43481e32fed96651157741b5dfad324ff8afb35368d8e09e87"
+  },
+  "display_data": "Same stored values and masks as the comparison renderer; non-finite unsupported cells are represented as null.",
+  "poetry_sources": {
+    "retrieved": "2026-10-29",
+    "paper": "https://arxiv.org/abs/1601.07435",
+    "normalization": "Lowercase; alphabetic tokens; editorial brackets removed but supplied letters retained; ampersand -> and; hyphens separate tokens; no spelling modernization; one-letter words retained in positions.",
+    "towneley_creation": {
+      "title": "Towneley Plays: The Creation",
+      "citation_url": "http://name.umdl.umich.edu/Towneley",
+      "retrieved_url": "https://blocksclass.com/libr/TownleyPlays.htm",
+      "edition": "England and Pollard 1897; UVA/OTA electronic transcription, mirrored by Blocksclass",
+      "scope": "Only The Creatio, all 267 numbered verse lines.",
+      "retrieval": "Web text extraction; speaker labels explicitly stripped. Raw extract retained.",
+      "rights": "Underlying 1897 edition is public domain. Electronic-source header says commercial use prohibited; extracted text is a local research input, not distributed under the toolkit MIT license.",
+      "lines": 267,
+      "words": 1728,
+      "sha256": "2249105356b1145285bdf12650dd1004c12722490c57a86f888922d94c1fc488"
+    },
+    "aeneid": {
+      "title": "Virgil: Aeneid (Latin)",
+      "citation_url": "https://sacred-texts.com/cla/virgil/aen/index.htm",
+      "retrieved_url": "https://spiritmaji.com/sacredtext/cla/virgil/aen/aenl{01..12}.htm",
+      "edition": "Sacred Texts Latin edition, archival mirror",
+      "scope": "All twelve books, preserving HTML verse breaks. Books separated in analysis.",
+      "book_line_counts": [
+        756,
+        803,
+        718,
+        704,
+        871,
+        900,
+        818,
+        731,
+        815,
+        907,
+        915,
+        950
+      ],
+      "rights": "Ancient Latin text; source edition reproduced by Sacred Texts. No English translation included.",
+      "lines": 9888,
+      "words": 63716,
+      "sha256": "01e04e4763b6765767a82b7a06d896a11d7a9c180184ee512a09daea9e8e0af8"
+    },
+    "source_sha256": {
+      "aeneid-01.html": "3048c073470526d1c94eb79b19781c0d091aa4eac92cf8f7f1c49021b789cb4b",
+      "aeneid-02.html": "a32b09367d1100e07893dc2c718521341e4cab412054175a255ac818ed917a13",
+      "aeneid-03.html": "89c8211eff8d6a9ec9c171a2f7a1435cb6c744d8e7fdc70e32c666d82f03cdf8",
+      "aeneid-04.html": "54f9a80d8127b9a36d136417aead2c69e819511045dbcbd3496f1743e7a4512e",
+      "aeneid-05.html": "7fa1b82f3b4219063292b6390e7c656566e1578d27014e992f25c7afacb82f7a",
+      "aeneid-06.html": "59a46b5ccd88827a1abb783a3241588c8ef8ac03588d9ed5bb5e04f8990b193a",
+      "aeneid-07.html": "ddd982babdaa98c01a89af324942cb30fa33b99394638322183dec9cbb2554c4",
+      "aeneid-08.html": "f37470c558f51a0e1a110c8f72221cf5afbd2032f4d05a51502553b86b580a1b",
+      "aeneid-09.html": "c0d82ab8e3d518d6cbfc5ea557abe42a01bf6d0e32ffc327c6f01fc17e3ec224",
+      "aeneid-10.html": "c3daedd58c31976fbaaf50327cdd952a0f983a9af1bb5edf0433b4e36c24babe",
+      "aeneid-11.html": "4d91ad47148889231154baccdd29cf0463eeba6f20ab6822388f8cd38d1a234e",
+      "aeneid-12.html": "dff27443a14c00c5758ec9d3631df3d5e7e614c049ae3ab158fb121a22b92cc2",
+      "towneley-creation-web-extract.txt": "bc089c1f80bed5bd29132ac0e23aa800b2e7a46476e98e6834c772ca05b05ad2"
+    }
+  },
+  "manuscript_validation": {
+    "js_pair_count_and_per_offset_counts_match": true,
+    "js_shuffle_hashes_match": true,
+    "source_order_and_geometry_verified": true,
+    "within_line_membership_verified": true,
+    "one_edit_independent_dp_checks": 4000,
+    "identity_and_one_edit_disjoint": true,
+    "js_kernel_support_matches": true,
+    "kernel_ess_max_error": 0.0,
+    "direct_kernel_max_error_points": 1.0258460747536446e-13
+  },
+  "poetry_validation": {
+    "towneley_creation": {
+      "draws": 999,
+      "words": 1728,
+      "source_lines": 267,
+      "source_hash": "2249105356b1145285bdf12650dd1004c12722490c57a86f888922d94c1fc488",
+      "validation": {
+        "js_max_error": 4.507458106761675e-08,
+        "edit_dp_verified": true,
+        "table_types": 505,
+        "independent_window_checks": 100,
+        "shuffle_geometry_replays": {
+          "page:regular": true,
+          "page:mild": true,
+          "page:dispersed": true,
+          "line:regular": true,
+          "line:mild": true,
+          "line:dispersed": true
+        },
+        "old_first_line_shuffle_hash_reproduces": true,
+        "no_source_line_splits": true,
+        "no_missing_geometry": true,
+        "no_future_or_self_pairs": true
+      }
+    },
+    "aeneid": {
+      "draws": 999,
+      "words": 63716,
+      "source_lines": 9888,
+      "source_hash": "01e04e4763b6765767a82b7a06d896a11d7a9c180184ee512a09daea9e8e0af8",
+      "validation": {
+        "js_max_error": 8.411566654320524e-08,
+        "edit_dp_verified": true,
+        "table_types": 16694,
+        "independent_window_checks": 100,
+        "shuffle_geometry_replays": {
+          "page:regular": true,
+          "page:mild": true,
+          "page:dispersed": true,
+          "line:regular": true,
+          "line:mild": true,
+          "line:dispersed": true
+        },
+        "old_first_line_shuffle_hash_reproduces": true,
+        "no_source_line_splits": true,
+        "no_missing_geometry": true,
+        "no_future_or_self_pairs": true
+      }
+    }
+  },
+  "figure_sha256": {
+    "js-continuous-comparison.png": "8604fdf70d32fb0673fbf9bfbdfeba7d67458fd7533165777aadee4f3c8ed37d",
+    "js-continuous-comparison.svg": "6c1477a8edf6a68e68fa49d301d1354d850dd7df2bab3f83300deab47a46a6d4",
+    "js-discrete-comparison.png": "b2c62a91f831f0943de8a7889d127696caee9ca0da0b049ff094b2b0d7a38da7",
+    "js-discrete-comparison.svg": "d2410c0933bfbf430fb25294da7eedc140b7a02959b88305b74b6be2e59b5436",
+    "js-continuous-comparison-mild.png": "360822f4239ccc093d6e4a28436e99ffd17d05af21e3b5d2ea9be5143e15c179",
+    "js-continuous-comparison-mild.svg": "cfca5561120617d8f6c641d0dfd0bb7e38ebf6eec9c6ff1d94bbd7fdd86925cb",
+    "js-continuous-comparison-dispersed.png": "a571b820349a7807a191efdc7dbce7deb5aa5b9f32cee06b0ff2c03d47b95432",
+    "js-continuous-comparison-dispersed.svg": "820bce438283ed977c9c5ddbfdd99d57940de397e3fe44b1dcedb9f3f0704e6b",
+    "identity-continuous-comparison.png": "e9e9857e8920df5e7ca5efbd30c81eb62bea0af10c087c4843a06c60299d167a",
+    "identity-continuous-comparison.svg": "637f0709dfb8a91387a3e732dc161e840bfc2c216d117794052c4ef9281aa45a",
+    "identity-discrete-comparison.png": "6a9c118f78d1889a31130694d084d4efcc7533654fbd14acaceeccb5f13718cb",
+    "identity-discrete-comparison.svg": "6899e6ff2548146d9c0c05573bc3b6b4a93b6861629e5ef1558800b2d3c51243",
+    "identity-continuous-comparison-mild.png": "bc68a95ec3653ba8275ac0cd7cd744560a96cfc8db0b66a382d97d73d8f0054d",
+    "identity-continuous-comparison-mild.svg": "8d59a1873a581f3b746f095c41b8b44995ba26564eb31dc2dbd5704a1f68544b",
+    "identity-continuous-comparison-dispersed.png": "dfafe897bc9ebfa73f75dc82ff47005852d8f55beb50a7d40a9463c0775114b3",
+    "identity-continuous-comparison-dispersed.svg": "7b01513570002cd697b6f323db660d4e652dd8cc37178a32bff4c728aa11a0fd",
+    "edit1-continuous-comparison.png": "5a107cf4fce277a9319bd90b1c5de5629fa05b700c5410c1773d2ff5a554e329",
+    "edit1-continuous-comparison.svg": "6b0b66d35f068390a241e1c2f83e7972f3f2f18f82c8f1f258c6129eeb524526",
+    "edit1-discrete-comparison.png": "47a98bc1e7b2207611ef740eb8d62a4e769acc87a4d0abb1a2f66168c43f5d13",
+    "edit1-discrete-comparison.svg": "ee81ef336f07d3a042f034a6825e10e97d75db1987be5da3812ee5f85f325fe8",
+    "edit1-continuous-comparison-mild.png": "1aac3c49eac3052876572e98399979ff5a18a51791e2ca433e357a615e6fcfe5",
+    "edit1-continuous-comparison-mild.svg": "58c4f8bae435ec6388c8f371bddb26e5dcdf1030825b7e67bc10eb719b828636",
+    "edit1-continuous-comparison-dispersed.png": "4918aa8451ed36e5f43b7ad6c03c6eaa87dbed7c76689452b0eb5b29dc2e34f8",
+    "edit1-continuous-comparison-dispersed.svg": "854ffddf0e3c0dba361144fcf9e603070fbab1010b8195690b5bcb7906f89764",
+    "poetry-independent-pages.png": "33da64b917505bb5415230c8eff2b2e8769e6dfe1c459d8923e2c3f4b1af0983"
+  },
+  "limitations": [
+    "Voynich uses compacted word positions and its retained JS candidate window; controls retain original positions.",
+    "JS feature alphabets differ: Voynich component pairs, control letter pairs.",
+    "Synthetic poetry pagination is not a facsimile reconstruction.",
+    "No new pixelwise significance or H2 tests."
+  ]
+}

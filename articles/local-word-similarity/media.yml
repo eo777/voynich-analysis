@@ -1,0 +1,146 @@
+figures:
+  js-continuous:
+    title: JS similarity · continuous · regular spacing
+    src: images/js-continuous-comparison.png
+    download: images/js-continuous-comparison.svg
+    alt: JS similarity · continuous · regular spacing for Voynich, Towneley Creation, Aeneid, Rhazes,
+      Galen, and Gart; observed, shuffled mean, and difference.
+    caption: Within-line × exact-character-length shuffles. Row-specific scales remain fixed across spacing
+      variants. Poetry uses intact source lines on independent pages. Differences are descriptive, not
+      pixelwise significance tests.
+  js-discrete:
+    title: JS similarity · ordinal
+    src: images/js-discrete-comparison.png
+    download: images/js-discrete-comparison.svg
+    alt: JS similarity · ordinal for Voynich, Towneley Creation, Aeneid, Rhazes, Galen, and Gart; observed,
+      shuffled mean, and difference.
+    caption: Within-line × exact-character-length shuffles. Row-specific scales remain fixed across spacing
+      variants. Poetry uses intact source lines on independent pages. Differences are descriptive, not
+      pixelwise significance tests.
+  js-continuous-mild:
+    title: JS similarity · continuous · mild dispersion
+    src: images/js-continuous-comparison-mild.png
+    download: images/js-continuous-comparison-mild.svg
+    alt: JS similarity · continuous · mild dispersion for Voynich, Towneley Creation, Aeneid, Rhazes,
+      Galen, and Gart; observed, shuffled mean, and difference.
+    caption: Within-line × exact-character-length shuffles. Row-specific scales remain fixed across spacing
+      variants. Poetry uses intact source lines on independent pages. Differences are descriptive, not
+      pixelwise significance tests.
+  js-continuous-dispersed:
+    title: JS similarity · continuous · greater dispersion
+    src: images/js-continuous-comparison-dispersed.png
+    download: images/js-continuous-comparison-dispersed.svg
+    alt: JS similarity · continuous · greater dispersion for Voynich, Towneley Creation, Aeneid, Rhazes,
+      Galen, and Gart; observed, shuffled mean, and difference.
+    caption: Within-line × exact-character-length shuffles. Row-specific scales remain fixed across spacing
+      variants. Poetry uses intact source lines on independent pages. Differences are descriptive, not
+      pixelwise significance tests.
+  identity-continuous:
+    title: Identity · continuous · regular spacing
+    src: images/identity-continuous-comparison.png
+    download: images/identity-continuous-comparison.svg
+    alt: Identity · continuous · regular spacing for Voynich, Towneley Creation, Aeneid, Rhazes, Galen,
+      and Gart; observed, shuffled mean, and difference.
+    caption: Within-line × exact-character-length shuffles. Row-specific scales remain fixed across spacing
+      variants. Poetry uses intact source lines on independent pages. Differences are descriptive, not
+      pixelwise significance tests.
+  identity-discrete:
+    title: Identity · ordinal
+    src: images/identity-discrete-comparison.png
+    download: images/identity-discrete-comparison.svg
+    alt: Identity · ordinal for Voynich, Towneley Creation, Aeneid, Rhazes, Galen, and Gart; observed,
+      shuffled mean, and difference.
+    caption: Within-line × exact-character-length shuffles. Row-specific scales remain fixed across spacing
+      variants. Poetry uses intact source lines on independent pages. Differences are descriptive, not
+      pixelwise significance tests.
+  identity-continuous-mild:
+    title: Identity · continuous · mild dispersion
+    src: images/identity-continuous-comparison-mild.png
+    download: images/identity-continuous-comparison-mild.svg
+    alt: Identity · continuous · mild dispersion for Voynich, Towneley Creation, Aeneid, Rhazes, Galen,
+      and Gart; observed, shuffled mean, and difference.
+    caption: Within-line × exact-character-length shuffles. Row-specific scales remain fixed across spacing
+      variants. Poetry uses intact source lines on independent pages. Differences are descriptive, not
+      pixelwise significance tests.
+  identity-continuous-dispersed:
+    title: Identity · continuous · greater dispersion
+    src: images/identity-continuous-comparison-dispersed.png
+    download: images/identity-continuous-comparison-dispersed.svg
+    alt: Identity · continuous · greater dispersion for Voynich, Towneley Creation, Aeneid, Rhazes, Galen,
+      and Gart; observed, shuffled mean, and difference.
+    caption: Within-line × exact-character-length shuffles. Row-specific scales remain fixed across spacing
+      variants. Poetry uses intact source lines on independent pages. Differences are descriptive, not
+      pixelwise significance tests.
+  edit1-continuous:
+    title: Exactly one edit · continuous · regular spacing
+    src: images/edit1-continuous-comparison.png
+    download: images/edit1-continuous-comparison.svg
+    alt: Exactly one edit · continuous · regular spacing for Voynich, Towneley Creation, Aeneid, Rhazes,
+      Galen, and Gart; observed, shuffled mean, and difference.
+    caption: Within-line × exact-character-length shuffles. Row-specific scales remain fixed across spacing
+      variants. Poetry uses intact source lines on independent pages. Differences are descriptive, not
+      pixelwise significance tests.
+  edit1-discrete:
+    title: Exactly one edit · ordinal
+    src: images/edit1-discrete-comparison.png
+    download: images/edit1-discrete-comparison.svg
+    alt: Exactly one edit · ordinal for Voynich, Towneley Creation, Aeneid, Rhazes, Galen, and Gart; observed,
+      shuffled mean, and difference.
+    caption: Within-line × exact-character-length shuffles. Row-specific scales remain fixed across spacing
+      variants. Poetry uses intact source lines on independent pages. Differences are descriptive, not
+      pixelwise significance tests.
+  edit1-continuous-mild:
+    title: Exactly one edit · continuous · mild dispersion
+    src: images/edit1-continuous-comparison-mild.png
+    download: images/edit1-continuous-comparison-mild.svg
+    alt: Exactly one edit · continuous · mild dispersion for Voynich, Towneley Creation, Aeneid, Rhazes,
+      Galen, and Gart; observed, shuffled mean, and difference.
+    caption: Within-line × exact-character-length shuffles. Row-specific scales remain fixed across spacing
+      variants. Poetry uses intact source lines on independent pages. Differences are descriptive, not
+      pixelwise significance tests.
+  edit1-continuous-dispersed:
+    title: Exactly one edit · continuous · greater dispersion
+    src: images/edit1-continuous-comparison-dispersed.png
+    download: images/edit1-continuous-comparison-dispersed.svg
+    alt: Exactly one edit · continuous · greater dispersion for Voynich, Towneley Creation, Aeneid, Rhazes,
+      Galen, and Gart; observed, shuffled mean, and difference.
+    caption: Within-line × exact-character-length shuffles. Row-specific scales remain fixed across spacing
+      variants. Poetry uses intact source lines on independent pages. Differences are descriptive, not
+      pixelwise significance tests.
+  verse-pages:
+    title: Independent poetry pages with source lines intact
+    src: images/poetry-independent-pages.png
+    alt: The first 48 supplied source lines of Towneley Creation and the Latin Aeneid, typeset with character-sized
+      word boxes, aligned left and without wrapping.
+    caption: Regular-spacing previews. The boxes are the scored geometry; the labels are illustrative
+      typesetting, not scanned handwriting. Synthetic pagination uses 48 source lines per page.
+charts:
+  similarity-explorer:
+    title: Explore local word similarity
+    type: heatmap
+    data: data/heatmaps.json
+    fallback: images/js-continuous-comparison.png
+    preset:
+      corpus: voynich
+      metric: js
+      coordinates: continuous
+      layout: regular
+    caption: Select a text and metric to inspect observed similarity, the within-line shuffle mean, and
+      the difference. The same native chart can appear inline or inside a gallery.
+galleries:
+  comparison-sheets:
+    title: Six-text comparison sheets
+    items:
+    - figure:js-continuous
+    - figure:js-discrete
+    - figure:identity-continuous
+    - figure:identity-discrete
+    - figure:edit1-continuous
+    - figure:edit1-discrete
+    - figure:js-continuous-mild
+    - figure:js-continuous-dispersed
+    - figure:identity-continuous-mild
+    - figure:identity-continuous-dispersed
+    - figure:edit1-continuous-mild
+    - figure:edit1-continuous-dispersed
+    - chart:similarity-explorer

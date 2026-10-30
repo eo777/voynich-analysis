@@ -1,0 +1,12 @@
+{% extends "base.njk" %}
+{% block main %}
+<article class="article">
+  <header class="article-header">
+    <p class="eyebrow"><a href="{{ url('articles/') }}">Articles</a> / <time datetime="{{ article.date }}">{{ article.date }}</time>{% if article.status %} · {{ article.status }}{% endif %}</p>
+    <h1>{{ article.title }}</h1><p class="lede">{{ article.summary }}</p>
+    <ul class="tags" aria-label="Topics">{% for tag in article.tags %}<li>{{ tag }}</li>{% endfor %}</ul>
+    <p class="article-actions"><a href="{{ url(article.path + 'gallery/') }}">Figure gallery</a> · <a href="{{ site.repository }}/edit/main/articles/{{ article.slug }}/index.md">Edit this article</a></p>
+  </header>
+  <div class="prose">{{ content | safe }}</div>
+</article>
+{% endblock %}

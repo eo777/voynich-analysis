@@ -1,0 +1,5 @@
+{% extends "base.njk" %}
+{% block main %}
+<div class="page-intro"><p class="eyebrow"><a href="{{ url(article.path) }}">Back to the article</a></p><h1>{{ title }}</h1><p class="lede">{{ article.summary }}</p></div>
+{{ gallery | safe }}
+{% endblock %}

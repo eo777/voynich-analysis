@@ -1,0 +1,6 @@
+<figure class="figure chart" id="{{ instance }}" data-chart-module="{{ item.module }}" data-chart-source="{{ item.data }}" data-chart-preset="{{ item.preset }}">
+  <figcaption><strong>{{ item.title }}</strong><p>{{ item.caption }}</p></figcaption>
+  <div class="chart-mount" aria-label="{{ item.title }}"><p class="chart-loading" role="status">Loading interactive chart…</p></div>
+  <noscript><p>JavaScript is needed for the interactive controls. <a href="{{ item.fallback }}">Open the static chart</a>.</p></noscript>
+  <p class="figure-links"><a href="#{{ instance }}" data-copy-link data-chart-link aria-label="Copy link to {{ item.title }}">Copy link to this view</a> · <a href="{{ item.data }}">Chart data (JSON)</a> · <a href="{{ item.fallback }}">Static version</a></p>
+</figure>
