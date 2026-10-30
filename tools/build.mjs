@@ -97,7 +97,11 @@ export async function build(root=ROOT){
     const figure=id=>{
       const item=media.figures?.[id];if(!item)throw new Error(`Unknown figure ${id} in ${entry.name}`);
       if(!item.title||!item.alt)throw new Error(`Figure ${id} needs a title and alt text`);
-      return {...item,src:resource(item.src),download:item.download?resource(item.download):null};
+      const bytes=fs.readFileSync(contained(dir,item.src));
+      // Reserve the exported PNG's aspect ratio before lazy loading; fragment
+      // targets below scientific figures must not move when an image arrives.
+      const dimensions=bytes.length>=24&&bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))?{width:bytes.readUInt32BE(16),height:bytes.readUInt32BE(20)}:{};
+      return {...item,...dimensions,src:resource(item.src),download:item.download?resource(item.download):null};
     };
     const chart=id=>{
       const item=media.charts?.[id];if(!item)throw new Error(`Unknown chart ${id} in ${entry.name}`);

@@ -1,13 +1,16 @@
 // Presentation behavior shared by every article. No article HTML is a template.
 const chartPromises=new WeakMap();
 export function hydrateCharts(root=document){
+ const pending=[];
  for(const figure of root.querySelectorAll('[data-chart-module]')){
-  if(figure.closest('[hidden]')||chartPromises.has(figure))continue;
+  if(figure.closest('[hidden]'))continue;
+  if(chartPromises.has(figure)){pending.push(chartPromises.get(figure));continue;}
   const mount=figure.querySelector('.chart-mount');
   const promise=import(figure.dataset.chartModule).then(module=>module.mount(mount,{source:figure.dataset.chartSource,preset:JSON.parse(figure.dataset.chartPreset||'{}')})).catch(error=>{
    mount.replaceChildren();const p=document.createElement('p');p.className='chart-error';p.textContent='The interactive chart could not load. The static figure and data links below remain available.';mount.append(p);console.error(error);
-  });chartPromises.set(figure,promise);
+  });chartPromises.set(figure,promise);pending.push(promise);
  }
+ return pending;
 }
 const gallerySelections=new WeakMap();
 for(const gallery of document.querySelectorAll('[data-gallery]')){
@@ -50,5 +53,9 @@ dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();
 dialog.querySelector('[data-viewer-size]').addEventListener('click',event=>{
  const actual=dialog.querySelector('.viewer-image').classList.toggle('actual');event.target.textContent=actual?'Fit to screen':'Actual size';event.target.setAttribute('aria-pressed',String(actual));
 });
-hydrateCharts();
+// Restore the initial fragment after asynchronous charts above it take space.
+// Do not move a reader who has already started interacting with the page.
+let readerInteracted=false;
+for(const event of ['wheel','touchstart','pointerdown','keydown'])window.addEventListener(event,()=>{readerInteracted=true;},{once:true,passive:true});
+Promise.allSettled(hydrateCharts()).then(()=>{if(!readerInteracted)revealHash();});
 revealHash();
